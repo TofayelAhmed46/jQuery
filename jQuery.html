@@ -1,0 +1,69 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <style>
+      div {
+        width: 300px;
+        border: 15px solid green;
+        padding: 50px;
+        margin: 20px;
+      }
+      </style>
+
+  </head>
+
+
+  <body>
+
+
+    <button id="change">Hide</Button>
+    <button id="change2">Show</Button>
+    <button id="colorC">Show</Button>
+    <h2 id="whide"> Hi Tofayel, how are you?</h2>
+  
+    
+    <div id="colorchange">
+      <p>tofayel ahmed;</p>
+    </div>
+    <script>
+
+     
+      // console.log(red);
+      //console.log('tofayel ahmed');
+      $('#change').on('click',function()
+      {
+        ($('#whide').hide());
+      });
+
+      $('#change2').on('click',function()
+      {
+        ($('#whide').show());
+      });
+      $('#colorC').on('click',function()
+      {
+      let red=Math.floor(Math.random()*255);
+      let green=Math.floor(Math.random()*255);
+      let blue=Math.floor(Math.random()*255);
+        ($('div').css("background-color","rgb("+red+","+green+","+blue+")"));
+
+        let r=Math.floor(Math.random()*255);
+      let g=Math.floor(Math.random()*255);
+      let b=Math.floor(Math.random()*255);
+        ($('p').css("color","rgb("+r+","+g+","+b+")"));
+      
+
+        let re=Math.floor(Math.random()*255);
+      let gr=Math.floor(Math.random()*255);
+      let bl=Math.floor(Math.random()*255);
+        ($('div').css("border-color","rgb("+re+","+gr+","+bl+")"));
+      });
+    </script>
+  </body>
+  </html>  
+
+
